@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Menus Part 2</title>
+        <style>
+            .r_p0{
+                padding: 0;
+            }
+            body{ /* Element Selector */
+                margin: 0;
+                background: #628FC6;
+                font-family: 'Poppins',sans-serif;
+                background-image: -webkit-linear-gradient(top, #AFC5EE , #BBCDE5);
+            }
+            header{ /* Element Selector */
+                height: 300px;
+                width: 100%;
+                border: 1px dashed red;
+            }
+            header > nav{
+                width: 80%;
+                height: 55px;
+                margin: auto;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.2);
+            }
+            header h1{ /* Descendent Selector */
+                text-align: center;
+                margin-top: 55px;
+                /* margin-bottom: 60px; */
+                color: #333;
+                text-shadow: 0 1px 1px #fff;
+            }
+            header > nav > ul{
+                list-style: none;
+            }
+            header > nav > ul > li{
+                float: left;
+            }
+            header > nav > ul > li > a{
+                text-decoration: none;
+                display: block;
+                color: #a6a6a6;
+                padding: 18px;
+                /* background: red; */
+                border-right: 1px solid #d9d9d9;
+            }
+            .menu > li{
+                position: relative;
+            }
+            .menu > li:hover > a{
+                background: #fff;
+                z-index: 100;
+                padding-bottom: 24px;
+            }
+            .menu > li:hover .submenu{
+                display: block;
+            }
+            .submenu{
+                display: none;
+                width: 294px;
+                height: 335px;
+                background: #fff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                border-radius: 10px;
+                border-top-left-radius: 0;
+            }
+            main{
+                height: 4000px;
+                width: 100%;
+                border: 1px dashed blue;
+            }
+            footer{
+                height: 600px;
+                width: 100%;
+                border: 1px dashed green;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Pure CSS3 <span style="font-weight: bolder;">Mega Menu</span></h1>
+            <nav>
+                <ul class="r_p0 menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">News</a>
+                                <a href="#">Mission</a>
+                                <a href="#">Our Team</a>
+                                <a href="#">Rewards</a>
+                                <a href="#">Certificates</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>                        
+                    </li>
+                    <li>
+                        <a href="#">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            Main
+        </main>
+        <footer>
+            Footer
+        </footer>
+    </body>
+</html>
